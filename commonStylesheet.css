@@ -1,0 +1,81 @@
+.console
+{
+    position: fixed;
+    z-index: 999;
+    width: 800px;
+    height: 200px;
+    min-height: 10px;
+    min-width: 10px;
+    top:50%;
+    left: 50%;
+    margin-top:-250px;
+    margin-left: -400px;
+    background-color: black;
+    border-style: solid;
+    border-color:crimson;
+    border-width: 1px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 10px;
+    opacity: 1;
+    transition: opacity 0.5s;
+    resize: both;
+    text-align: left;
+}
+::-webkit-resizer {
+    background-color: #ee1a3a;
+}
+::-webkit-scrollbar {
+    width: 14px;
+    
+}
+::-webkit-scrollbar-track {
+    background-color: #3a3a3a;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    background-color: #ee1a3a;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #aa1a1a;
+}
+.consoleHidden
+{
+    opacity: 0;
+    pointer-events:none;
+}
+.consoleLine
+{
+    display: block;
+    height: 20px;
+    font-family:'Nixie One', cursive;
+    color: white;
+    margin: 2px;
+    font-size: 15px;
+    overflow: hidden;
+    word-break: break-all;
+    background-color: rgb(48,48,48);
+    width: 100%;
+    animation: lineAnim 4s ease-out forwards;
+}
+@keyframes lineAnim
+{
+    0%
+    {
+        background-color: rgb(48,48,48);
+        width: 0%;
+    }
+    100%
+    {
+        background-color: black;
+        width: 100%;
+    }
+}
+.footer
+{
+    font-family: 'Poiret One', cursive;
+    background-color: #212027;
+    color:rgb(190,190,190);
+    text-align: center;
+    font-size: 13px;
+}

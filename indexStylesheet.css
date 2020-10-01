@@ -1,0 +1,289 @@
+#si1{background-image: url(images/1.jpg);background-size: cover;}
+#si2{background-image: url(images/2.jpg);background-size: cover;}
+#si3{background-image: url(images/3.jpg);background-size: cover;}
+#si4{background-image: url(images/4.jpg);background-size: cover;}
+#si5{background-image: url(images/5.jpg);background-size: cover;}
+
+.loadingPanel{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(23,23,23);
+    color: rgba(222,222,222,0);
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 100;
+    font-size: 100px;
+    text-align: center;
+    padding-top: 300px;
+    z-index: 9999;
+    opacity: 1;
+    transition: color 1s, opacity 1s;
+}
+.loadingPanelHide{
+    opacity: 0;
+    pointer-events: none;
+}
+.textFadeIn{
+    color: rgba(222,222,222,1);
+}
+
+body{
+    margin: 0px;
+    overflow-x: hidden;
+}
+.mainPanel{
+    min-height: 100vh;
+    width: 100%;
+}
+    
+.spotlightOverlay
+{
+    position: absolute;
+    z-index: 101;
+    width: 100%;
+    margin-top: 520px;
+    pointer-events:none;
+}
+.spotlight_l
+{
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    float:left;
+    width: 60px;
+    height: 300px;
+    z-index: 999;
+    left: 0;
+    top:200px;
+    background-image: url(images/l.png);
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: left 0.25s;
+}
+.spotlight_l:hover
+{
+    left:-6;
+}
+.spotlight_r:hover
+{
+    right:-6;
+}
+.spotlight_r
+{
+    opacity: 0;
+    cursor: pointer;
+    right:0;
+    top:200px;
+    display: inline-block;
+    position: absolute;
+    float:right;
+    width: 60px;
+    height: 300px;
+    z-index: 999;
+    background-image: url(images/r.png);
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    transition: right 0.25s;
+}
+.spotlightHead
+{
+    width:100%;
+    font-size: 70px;
+    color: white;
+    text-shadow: 1px 1px 6px rgba(20,20,20,0.8);
+    padding-left: 30px;
+    text-align: left;
+    font-weight:bold;
+    font-family: "Arial Black", Gadget, sans-serif;
+    transition: transform 1.2s, opacity 0.5s;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bolder;
+    opacity: 1;
+}
+.headChanging
+{
+    transition: transform 1.2s, opacity 0.5s;
+    transform: translateX(-800px);
+    -webkit-transform: translateX(-800px);
+    -ms-transform: translateX(-800px);
+    opacity: 0;
+}
+.textChanging
+{
+    transition: transform 2.4s;
+    transform: translateX(-1000px);
+}
+.spotlightText
+{
+    width:500px;
+    font-size: 28px;
+    color: white;
+    text-shadow: 1px 1px 6px rgba(20,20,20,0.8);
+    padding-bottom: 10px;
+    padding-left: 30px;
+    text-align: left;
+    transition: transform 0.8s;
+    font-family:'Poiret One', cursive;
+}
+.spotlightPanel
+{
+    position: absolute;
+    width:100%;
+    height: 100vh;
+    background-image: url(images/1.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+.spotlightButtonHolder
+{
+    float: right;
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    margin-top:-25px;
+    z-index: 99;
+}
+.spotlightButton
+{
+    display: inline-block;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    border-radius: 100%;
+    background-color: rgba(255,255,255,0.4);
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(200,200,200,0.5);
+    transition: border 0.2s;
+}
+.spotlightButton:hover
+{
+    transition: border 0.3s;
+    background-color: rgba(255,255,255,0.4);
+    border-color: rgba(222,222,222,1);
+}
+.spotlightButtonCurrent
+{
+    pointer-events: none;
+    transition: border 0.3s;
+    border-color: rgba(222,222,222,1);
+}
+.spotlightImg
+{
+    position: relative;
+    pointer-events:none;
+    height: 100%;
+    width:100%;
+    transition: opacity 1.4s;
+    opacity: 1;
+    z-index: 50;
+    overflow: hidden;
+}
+.stack
+{
+    margin-top:0px;
+}
+.spotlightImgHidden
+{
+    position: relative;
+    pointer-events:none;
+    height: 0px; 
+    width: 100%;
+    transition: opacity 1.4s;
+    opacity: 0;
+    z-index: 50;
+}
+.spotlightMargin
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.lowerPanel
+{
+    background-color: #0A0A0A;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    height: auto;
+    overflow-y: hidden;
+    padding-bottom: 14px;
+}
+.leftPanel
+{
+    width: 24%;
+    display: inline-block;
+    text-align: left;
+    float: left;
+}
+.middlePanel
+{
+    width: 25%;
+    display: inline-block;
+    text-align: left;
+    float: left;
+}
+.rightPanel
+{
+    margin-top: 8px;
+    width: 24%;
+    display: inline-block;
+    float: left;
+}
+.line
+{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-top: solid 1px rgb(40,40,40);
+    height: 0px;
+    width: 90%;
+    margin:auto;
+}
+.contactHead
+{
+    color: rgb(222,222,222);
+    width:100%;
+    font-size: 40px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-left: 12%;
+    font-family: 'Julius Sans One', cursive;
+}
+.contactText
+{
+    color: rgb(222,222,222);
+    width:100%;
+    padding-left: 12%;
+    font-size: 28px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-family: 'Nixie One', cursive;
+}
+.butt
+{
+    font-family: 'Nixie One', cursive;
+    width: 100%;
+    border-radius: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin:5px;
+    height: auto;
+    font-size: 35px;
+    text-decoration: none;
+    display: block;
+    color: rgb(222,222,222);
+    border : solid 1px rgba(69,69,69,0);
+    transition: border 0.4s;
+}
+.butt:hover
+{
+    border : solid 1px rgba(69,69,69,1);
+}

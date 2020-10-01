@@ -1,0 +1,612 @@
+a{
+    text-decoration: none;
+    color: rgb(222,222,222);
+}
+body{
+    margin: 0px;
+    overflow: hidden;
+    background-color: rgb(47,47,47);
+}
+
+
+#pre1 { background: url(images/x.png) no-repeat -9999px -9999px; }
+#pre2 { background: url(images/xSel.png) no-repeat -9999px -9999px; }
+.preloaders{
+    width: 0px;
+    height: 0px;
+}
+
+.errorBox
+{
+    position: fixed;
+    transition: opacity 1s, transform 1s;
+    opacity: 0;
+    transform: translateY(-500px);
+    top:20%;
+    left:50%;
+    width: 600px;
+    background-color: rgba(45,20,30,0.8);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgb(88,88,88,0.5);
+    margin-left: -300px;
+    z-index: 999;
+    text-align: center;
+    padding: 15px 38px 15px 20px;
+}
+.show
+{
+    transition: opacity 1s, transform 1s;
+    transform: translateY(0px);
+    opacity: 1;
+}
+.hide
+{
+    transition: opacity 1s, transform 1s;
+    opacity: 0;
+    transform: translateY(-500px);
+}
+.error
+{
+    display: inline-block;
+    border-style: solid;
+    border-color: #212027;
+    border-width: 1px;
+    border-radius: 3px;
+    font-size: 25px;
+    color: white;
+    font-family:'Nixie One', cursive;
+    font-weight:500;
+    width: 100%;
+    padding:2px 5px 2px 5px;
+    margin: 2px;
+}
+.closeButton
+{
+    transition: background-color 0.2s, color 0.2s,font-weight 0.2s;
+    font-weight: normal;
+    width: 150px;
+    height: 40px;
+    font-size: 32px;
+    text-align: center;
+    background-color: rgba(0,0,0,0);
+    border-style: solid;
+    border-color: rgba(47,47,47,1);
+    border-width: 1px;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Poiret One', cursive;
+    margin: auto;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.closeButton:hover
+{
+    transition: background-color 0.2s, color 0.2s;
+    background-color: rgba(252,232,222,0.1);
+    color:rgb(247,247,247);
+}
+
+
+.mainPanel{
+    background-color: rgb(58,58,58);
+    height: 100%;
+    width: 100%;
+}
+.popUp{
+    top:50%;
+    left: 50%;
+    position: fixed;
+    text-align: center;
+    color: rgb(222,222,222);
+    width: 600px;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: rgba(40,40,40,0.8);
+    
+}
+#popUp1{
+    height: 120px;
+    margin-top: -60px;
+    margin-left: -300px;
+    transition: border 0.4s, transform 1s, opacity 0.8s;
+}
+#popUp2{
+    height: 160px;
+    margin-top: -80px;
+    margin-left: -300px;
+    transition: border 0.4s, transform 1s, opacity 0.8s;
+}
+#popUp3{
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -300px;
+    transition: border 0.4s, transform 1s, opacity 0.8s;
+}
+#popUp4{
+    height: 155px;
+    margin-top: -50px;
+    margin-left: -300px;
+    transition: border 0.4s, transform 1s, opacity 0.8s;
+}
+.popUpText{
+    width: 100%;
+    display: block;
+    font-size: 35px;
+    font-family:'Nixie One', cursive;
+}
+.butt{
+    display: inline-block;
+    font-size: 35px;
+    font-family:'Nixie One', cursive;
+    margin: auto;
+    margin-top: 15px;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
+    border-radius: 3px;
+    border: solid 1px rgba(222,222,222,0);
+    transform: translateY(0px);
+    transition: border 0.4s, transform 1s;
+    cursor: pointer;
+}
+.butt:hover{
+    border: solid 1px rgba(222,222,222,1);
+}
+.inactiveToMouse{
+    pointer-events: none;
+    opacity: 0.1;
+}
+
+.inp{
+    background-color: rgba(100,100,100,0.4);
+    border-radius: 3px;
+    color:rgb(222,222,222);
+    border: 1px solid rgb(90,90,90);
+    margin: 10px;
+    font-size: 30px;
+    font-family:'Poiret One', cursive;
+    padding: 2px;
+    padding-left: 10px;
+    text-align: left;
+}
+#bookingInputSubmitButt{
+    display: block;
+    margin: 2px;
+    margin: auto;
+    width: 200px;
+}
+
+.textboxes
+{
+    position: relative;
+    display: block;
+    background-color:#ca2131;
+    height:70px;
+    font-family: 'Julius Sans One', sans-serif;
+    color: white;
+    box-shadow: 0px -4px 8px rgba(88,88,88,0.5);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 4px;
+    margin-bottom: -60px;
+}
+#date_Time
+{
+    display:inline-block;
+    float:left;
+    height: 100%;
+    font-size: 40px;
+}
+#Price
+{
+    margin-left: 20px;
+    width: 120px;
+}
+.priceDiv
+{
+    display: inline-block;
+    height: 70px;
+    margin: 0px;
+    transition: transform 1s, opacity 0.8s;
+    opacity: 1;
+    margin-left: 100px;
+}
+.priceHide
+{
+    opacity: 0;
+}
+
+#sub
+{
+    transition: background-color 0.2s, color 0.2s,font-weight 0.2s;
+    font-weight: normal;
+    width: 150px;
+    margin-top: 9px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgba(0,0,0,0);
+    border-style: solid;
+    border-color: rgba(47,47,47,1);
+    border-width: 1px;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Poiret One', cursive;
+    cursor: pointer;
+}
+#sub:hover
+{
+    transition: background-color 0.2s, color 0.2s,font-weight 0.2s;
+    font-weight: bolder;
+    background-color: rgba(252,132,122,0.3);
+    color:rgb(47,47,47);
+}
+#finalize
+{
+    display: inline-block;
+    transition: background-color 0.2s, color 0.2s,font-weight 0.2s;
+    font-weight: normal;
+    width: 172px;
+    margin-top: 9px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgba(0,0,0,0);
+    border-style: solid;
+    border-color: rgba(47,47,47,1);
+    border-width: 1px;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Poiret One', cursive;
+    cursor: pointer;
+}
+#finalize:hover
+{
+    transition: background-color 0.2s, color 0.2s,font-weight 0.2s;
+    font-weight: bolder;
+    background-color: rgba(252,132,122,0.3);
+    color:rgb(47,47,47);
+}
+#enterbutton
+{
+    display:inline-block;
+    float:right;
+    height: 100%;
+    font-size: 40px;
+}
+#minutes
+{
+    margin-right: 10px;
+    
+}
+#duration
+{
+    width:80px;
+    margin-left: 10px;
+    
+}
+.dateTimeInput
+{
+    margin:1px;
+    margin-top: 10px;
+    width:50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgba(0,0,0,0);
+    border-style: solid;
+    border-color: rgba(47,47,47,1);
+    border-width: 1px;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Poiret One', cursive;
+}
+.dateTimeInput:
+{
+    background-color: white;
+}
+input[type='number']
+{
+    -moz-appearance:textfield;
+}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button
+{
+    -webkit-appearance:none;
+    margin: 0px;
+}
+
+
+
+
+
+.upperPanel{
+    width:100%;
+    background-color: rgb(58,50,50); /*rgb(130,35,35);*/
+}
+.leftPanel{
+    display: inline-block;
+    height: 610px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 660px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.rightPanel{
+    float: right;
+    display: inline-block;
+    height: 610px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width:660px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.panelHeader{
+    margin: 10px;
+    font-family: 'Poiret One', cursive;
+    font-size: 60px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    color: white;
+    text-shadow: 3px 3px 5px rgb(50,50,50);
+}
+.orderList{
+    width:100%;
+    min-height: 0px;
+}
+.footerCustom{
+    display: block;
+    margin-top: 60px;
+    height: 100%;
+    width: 100%;
+    font-family: 'Poiret One', cursive;
+    background-color: #212027;
+    color:rgb(190,190,190);
+    text-align: center;
+    font-size: 13px;
+}
+
+.menuHead{
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 40px;
+    font-family: 'Nixie One', sans-serif;
+    margin-top: 20px;
+    color: rgb(222,222,222);
+    border-bottom: 2px solid rgb(200,100,100);
+    margin-bottom: 10px;
+}
+
+
+
+.selItem{
+    display: inline-block;
+    min-width: 600px;
+    box-shadow: 2px 2px 4px rgb(30,30,30);
+    padding: 8px;
+    background-color: crimson;
+    height: 25px;
+    margin-top: 6px;
+    overflow: hidden;
+    margin-bottom: 4px;
+    transition: height 0.45s,margin 0.5s, padding 0.45s;
+    
+}
+.hideVertical{
+    height: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.itemCancel{
+    display: inline-block;
+    float: right;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    border-radius: 3px;
+    transition: background-image 0.3s, transform 0.3s;
+    background-size: contain;
+    transform: scale(1.2);
+    background-image: url(images/x.png);
+}
+.ItemCancel:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+    background-image: url(images/xSel.png);
+}
+.itemQty{
+    display: inline-block;
+    float:right;
+    font-family: 'Nixie One', sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-right: 30px;
+}
+.item{
+    display: inline-block;
+    min-width: 600px;
+    box-shadow: 2px 2px 4px rgb(30,30,30);
+    padding: 8px;
+    background-color: crimson;
+    height: 25px;
+    margin-top: 6px;
+    margin-bottom: 4px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+.item:hover{
+    transform: scale(1.03);
+    background-color: #ff5560;
+    cursor: pointer;
+}
+.iname{
+    display: inline-block;
+    font-family: 'Julius Sans One', sans-serif;
+    float: left;
+    text-align: left;
+    font-size: 20px;
+    color: white;
+}
+.iprice{
+    display: inline-block;
+    float:right;
+    font-family: 'Nixie One', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+
+.paymentGateway
+{
+    position: fixed;
+    width:500px;
+    border-radius: 5px;
+    background-color: rgba(33,33,33,0.8);
+    left:50%;
+    top:30%;
+    margin-left:-250;
+    z-index: 999;
+    transition: opacity 1s, transform 1s;
+    opacity: 1;
+    transform: translateY(0px);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+#paymentConfirmButton
+{
+    float: right;
+    margin-right: 20px;
+}
+#paymentCancelButton
+{
+    float: left;
+    margin-left: 20px;
+}
+.pgInput
+{
+    padding: 2px;
+    display: inline-block;
+    width:90%;
+    text-align: left;
+    background-color: transparent;
+    border-color: rgb(88,88,88);
+    border-width: 1px;
+    font-family: 'Poiret One', cursive;
+    border-radius: 3px;
+    border-style: solid;
+    font-size: 20px;
+    margin: 3px;
+    color: rgb(222,222,222);
+}
+#pgCard1
+{
+    padding: 2px;
+    display: inline-block;
+    width:90%;
+    text-align: left;
+    background-color: transparent;
+    border-color: rgb(88,88,88);
+    border-width: 1px;
+    font-family: 'Poiret One', cursive;
+    border-radius: 3px;
+    border-style: solid;
+    font-size: 20px;
+    margin: 3px;
+    color: rgb(222,222,222);
+}
+#pgCard2
+{
+    padding: 2px;
+    display: inline-block;
+    width:90%;
+    text-align: left;
+    background-color: transparent;
+    border-color: rgb(88,88,88);
+    border-width: 1px;
+    font-family: 'Poiret One', cursive;
+    border-radius: 3px;
+    border-style: solid;
+    font-size: 20px;
+    margin: 3px;
+    color: rgb(222,222,222);
+}
+#mobNo
+{
+    padding: 2px;
+    display: inline-block;
+    width:90%;
+    text-align: left;
+    background-color: transparent;
+    border-color: rgb(88,88,88);
+    border-width: 1px;
+    font-family: 'Poiret One', cursive;
+    border-radius: 3px;
+    border-style: solid;
+    font-size: 20px;
+    margin: 3px;
+    color: rgb(222,222,222);
+}
+.paymentButton
+{
+    display: inline-block;
+    text-align: center;
+    font-weight: normal;
+    width: 150px;
+    height: 40px;
+    font-size: 32px;
+    text-align: center;
+    background-color: rgba(0,0,0,0);
+    border-style: solid;
+    border-color: rgba(47,47,47,1);
+    border-width: 1px;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Poiret One', cursive;
+    margin: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+.OkButton
+{
+    display: inline-block;
+    text-align: center;
+    font-weight: normal;
+    width: 150px;
+    height: 40px;
+    font-size: 32px;
+    text-align: center;
+    background-color: rgba(0,0,0,0);
+    border-style: solid;
+    border-color: rgba(222,222,222,0.1);
+    border-width: 1px;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Poiret One', cursive;
+    margin: auto;
+    margin-top: 3px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+.OkButton:hover
+{
+    border-color: rgba(222,222,222,0.5);
+}
+.paymentButton:hover
+{
+    border-color: rgba(222,222,222,0.5);
+}
+.pgHide
+{
+    transition: opacity 1s, transform 1s;
+    opacity: 0;
+    transform: translateY(-500px);
+}

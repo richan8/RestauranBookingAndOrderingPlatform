@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Chef</title>
+    <link rel="stylesheet" type="text/css" href="chefStylesheet.css">
+    <link rel="stylesheet" type="text/css" href="commonStylesheet.css">
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+</head>
+<body>
+    <div class="mainPanel">
+        <div class="timer">12:24:00</div>
+        <div class="dateBox">
+            <input class="dateInput" placeholder="D" id="dateIn" type="number"/>
+            <input class="dateInput" placeholder="M" id="monthIn" type="number"/>
+            <div class="dateSub">Check</div>
+        </div>
+        <div class="itemPanel">
+            <!--EXAMPLE ITEMS-->
+            <!--<div class="item" id="i01"><div class="iname">Sukhothai Manchurian</div><div class="iTime">17:50</div><div class="iQty">1</div></div>
+            <div class="item" id="i01"><div class="iname">Shahi Paneer</div><div class="iTime">17:20</div><div class="iQty">3</div></div>
+            <div class="item" id="i01"><div class="iname">Chicken Lollipop</div><div class="iTime">19:50</div><div class="iQty">2</div></div>-->
+        </div>
+    </div>
+    <div class="footer">A joint project by Richanshu Jha and Manik Jaiswal</div>
+    <div class="errorBox hide">
+        <div id="errorClose" class="closeButton">Close</div>
+    </div>
+    <div id="terminal" class="console consoleHidden">
+        <div class="consoleLine">HTML Starting to load</div>
+        <div class="consoleLine">Javascript Loading</div>
+        <script type="text/javascript" src="chefScript.js"></script>
+        <div class="consoleLine">Page fully Loaded</div>
+    </div>
+</body>
+</html>

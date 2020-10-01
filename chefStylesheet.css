@@ -1,0 +1,199 @@
+body{
+    margin: 0px;
+    overflow: hidden;
+    background-color: rgb(47,47,47);
+    text-align: center;
+}
+.itemPanel{
+    height: 62%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.footer{
+    height: 100%;
+}
+.errorBox
+{
+    position: fixed;
+    transition: opacity 1s, transform 1s;
+    opacity: 0;
+    transform: translateY(-500px);
+    top:20%;
+    left:50%;
+    width: 600px;
+    background-color: rgba(45,20,30,0.8);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgb(88,88,88,0.5);
+    margin-left: -300px;
+    z-index: 999;
+    text-align: center;
+    padding: 15px 38px 15px 20px;
+}
+.show
+{
+    transition: opacity 1s, transform 1s;
+    transform: translateY(0px);
+    opacity: 1;
+}
+.hide
+{
+    transition: opacity 1s, transform 1s;
+    opacity: 0;
+    transform: translateY(-500px);
+}
+.error
+{
+    display: inline-block;
+    border-style: solid;
+    border-color: #212027;
+    border-width: 1px;
+    border-radius: 3px;
+    font-size: 25px;
+    color: white;
+    font-family:'Nixie One', cursive;
+    font-weight:500;
+    width: 100%;
+    padding:2px 5px 2px 5px;
+    margin: 2px;
+}
+.closeButton
+{
+    transition: background-color 0.2s, color 0.2s,font-weight 0.2s;
+    font-weight: normal;
+    width: 150px;
+    height: 40px;
+    font-size: 32px;
+    text-align: center;
+    background-color: rgba(0,0,0,0);
+    border-style: solid;
+    border-color: rgba(47,47,47,1);
+    border-width: 1px;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Poiret One', cursive;
+    margin: auto;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.closeButton:hover
+{
+    transition: background-color 0.2s, color 0.2s;
+    background-color: rgba(252,232,222,0.1);
+    color:rgb(247,247,247);
+}
+.leftPanel{
+    display: inline-block;
+    height: 610px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.item{
+    display: inline-block;
+    min-width: 1000px;
+    box-shadow: 2px 2px 4px rgb(30,30,30);
+    padding: 8px;
+    background-color: crimson;
+    height: 25px;
+    margin-top: 6px;
+    margin-bottom: 4px;
+    opacity: 1;
+    animation: itemIn 1s forwards ease-in-out;
+}
+@keyframes itemIn{
+    0%{
+        background-color: #74031C;
+    }
+    100%
+    {
+        background-color: crimson;
+    }
+}
+
+
+
+.item:hover{
+    /*transform: scale(1.03);
+    background-color: #ff5560;
+    cursor: pointer;*/
+}
+.iname{
+    display: inline-block;
+    font-family: 'Julius Sans One', sans-serif;
+    float: left;
+    text-align: left;
+    font-size: 20px;
+    color: white;
+}
+.iTime{
+    display: inline-block;
+    float:right;
+    font-family: 'Nixie One', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+.iQty{
+    display: inline-block;
+    float:right;
+    font-family: 'Nixie One', sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-right: 30px;
+}
+.timer{
+    margin: 30px;
+    font-family: 'Nixie One', sans-serif;
+    color: rgb(222,222,222);
+    font-size: 100px;
+}
+.dateBox{
+    display: block;
+    width: 100%;
+    min-height: 20px;
+    background-color: transparent;
+}
+.dateInput{
+    background-color: transparent;
+    display: inline-block;
+    margin-bottom: 10px;
+    border: 1px solid rgb(188,188,188);
+    border-radius: 3px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    padding: 8px;
+    width: 100px;
+    height: 60px;
+    color: rgb(222,222,222);
+    margin-left: 8px;
+}
+.dateSub{
+    background-color: transparent;
+    display: inline-block;
+    margin-bottom: 9px;
+    border-radius: 3px;
+    border: 1px solid rgb(188,188,188);
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 9px;
+    color: rgb(135,135,135);
+    height: 50px;
+    margin-left: 8px;
+    transition: background-color 0.4s;
+}
+.dateSub:hover{
+    background-color: rgba(63,63,63,0.5);
+    cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}

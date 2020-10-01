@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>Reserve Tables</title>
+    <link rel="stylesheet" type="text/css" href="tableStylesheet.css">
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+</head>
+<body>
+    <div class="preloaders">
+        <div id="pre1"></div>
+        <div id="pre2"></div>
+        <div id="pre3"></div>
+        <div id="pre4"></div>
+        <div id="pre5"></div>
+        <div id="pre6"></div>
+        <div id="pre7"></div>
+        <div id="pre8"></div>
+        <div id="pre9"></div>
+        <div id="pre10"></div>
+        <div id="pre11"></div>
+        <div id="pre12"></div>
+        <div id="pre13"></div>
+        <div id="pre14"></div>
+        <div id="pre15"></div>
+        <div id="pre16"></div>
+        <div id="pre17"></div>
+        <div id="pre18"></div>
+    </div>
+    
+    <div class="floorplan">
+        <img src="images/empty%20Floorplan.png"></img>
+        <div class="selectTableText">SELECT A TABLE</div>
+    </div>
+    <div class="AllTablesContainer">
+        <div id="t1" class="table bar a_available"></div>
+        <div id="t2" class="table bar a_available"></div>
+        <div id="t3" class="table bar a_available"></div>
+        <div id="t4" class="table bar a_available"></div>
+        <div id="t5" class="table mdr b_available"></div>
+        <div id="t6" class="table mdr b_available"></div>
+        <div id="t7" class="table mdr b_available"></div>
+        <div id="t8" class="table mdr b_available"></div>
+        <div id="t9" class="table mdr b_available"></div>
+        <div id="t10" class="table mdr b_available"></div>
+        <div id="t11" class="table mdr b_available"></div>
+        <div id="t12" class="table mdr b_available"></div>
+        <div id="t13" class="table win a_available"></div>
+        <div id="t14" class="table win a_available"></div>
+        <div id="t15" class="table win a_available"></div>
+        <div id="t16" class="table win a_available"></div>
+        <div id="t17" class="table win a_available"></div>
+        <div id="t18" class="table win a_available"></div>
+        <div id="t19" class="table win a_available"></div>
+        <div id="t20" class="table mdr d_available"></div>
+        <div id="t21" class="table win c_available"></div>
+        <div id="t22" class="table win c_available"></div>
+        <div id="t23" class="table spr sp_available"></div>
+        <div id="t24" class="table pri p_available"></div>
+    </div>
+    <div class="textboxes">
+        <div id="date_Time">
+                Date and Time
+                <input id="day" class="dateTimeInput" type="number" placeholder="D" max="31" min="1"><input id="month" class="dateTimeInput" type="number" placeholder="M" max="12" min="1">
+                <input id="hours" class="dateTimeInput" type="number" placeholder="h" max="22" min="9">:<input id="minutes" class="dateTimeInput" type="number" placeholder="m" max="59" min="0">
+                Duration<input id="duration" class="dateTimeInput" type="number" placeholder="m" max="600" min="15">
+                <div class="priceDiv priceHide"><input id="finalize" type="submit" value="CONFIRM"></div>
+        </div>
+        <div id="enterbutton">
+            <input id="sub" type="submit" value="CHECK">
+        </div>
+    </div>
+    <div class="footer">A joint project by Richanshu Jha and Manik Jaiswal</div>
+    
+    <div class="errorBox">
+        <div class="closeButton">Close</div>
+    </div>
+    <div id="terminal" class="console consoleHidden">
+        <div class="consoleLine">HTML Starting to load</div>
+        <div class="consoleLine">Default Bit String :</div>
+        <div class="consoleLine bitString">111111111111111111111111</div>
+        <script type="text/javascript" src="tableScript.js"></script>
+    </div>
+    <div class="paymentGateway hide">
+        <input id="pgName" class="pgInput" type="text" placeholder="NAME">
+        <input id="pgMob" class="pgInput" type="number" placeholder="MOBILE NUMBER">
+        <input id="pgCard" class="pgInput" type="number" placeholder="CARD NUMBER">
+        <div class="pgInput" id="refundText" type="text" placeholder="" contenteditable="false">The temporary charge will be refunded on check in</div>
+        <div class="paymentButton" id="paymentConfirmButton">CONFIRM</div>
+        <div class="paymentButton" id="paymentCancelButton">CANCEL</div>
+    </div>
+    
+    <div class="bidDisplay hide">
+        <div class="bdInput">Booking Successful !</div>
+        <div class="bdInput bookingIDBox">Your Booking ID is : ???</div>
+        <div class="bdInput" id="refundText" type="text" placeholder="" contenteditable="false">Please store your Booking ID safely.</div>
+        <a class="OkButton" id="okButton" href="order.html">OK</a>
+    </div>
+    
+    
+</body>
+</html>

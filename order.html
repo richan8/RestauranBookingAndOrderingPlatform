@@ -1,0 +1,118 @@
+<html>
+<head>
+    <title>Place an Order</title>
+    <link rel="stylesheet" type="text/css" href="orderStylesheet.css">
+    <link rel="stylesheet" type="text/css" href="commonStylesheet.css">
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+</head>
+<body>
+    <div class="popUp hide" id="popUp1">
+        <div class="popUpText">Have you booked a table?</div>
+        <div class="butt" id="bookingYesButt">Yes</div>
+        <div class="butt" id="bookingNoButt">No</div>
+    </div>
+    <div class="popUp hide" id="popUp2">
+        <div class="popUpText">Enter your booking ID</div>
+        <input class="inp" id="bookingInput"/>
+        <div class="butt" id="bookingInputSubmitButt">Submit</div>
+    </div>
+    <div class="popUp hide" id="popUp3">
+        <div class="popUpText">Invalid Booking ID</div>
+        <a href="index.html" class="butt" id="bookingInputSubmitButt">OK</a>
+    </div>
+    <div class="popUp hide" id="popUp4">
+        <div class="popUpText">Order Placed !</div>
+        <div id="finishText" class="popUpText">Order id is : _</div>
+        <a href="index.html" class="butt" id="finishButt">OK</a>
+    </div>
+    <div class="preloaders">
+        <div id="pre1"></div>
+        <div id="pre2"></div>
+    </div>
+    <div class="mainPanel">
+        <div class="upperPanel">
+            <div class="leftPanel">
+                <div class="panelHeader">MENU</div>
+                <div class="menuHead">Starters</div>
+                <div class="item" id="i01"><div class="iname">Sukhothai Manchurian</div><div class="iprice">150</div></div>
+                <div class="item" id="i02"><div class="iname">Hawaiian Babycorn</div><div class="iprice">120</div></div>
+                <div class="item" id="i03"><div class="iname">Hazel Chilly Potato</div><div class="iprice">160</div></div>
+                <div class="item" id="i04"><div class="iname">Chicken Lollipop</div><div class="iprice">140</div></div>
+                <div class="item" id="i05"><div class="iname">Drums of Heaven</div><div class="iprice">180</div></div>
+                <div class="item" id="i06"><div class="iname">Kentucky Bacon strips</div><div class="iprice">120</div></div>
+                <div class="item" id="i07"><div class="iname">Tandoori Chicken</div><div class="iprice">200</div></div>
+                <div class="item" id="i08"><div class="iname">Chicken Popcorn</div><div class="iprice">80</div></div>
+                <div class="item" id="i09"><div class="iname">Fish N' Chips</div><div class="iprice">130</div></div>
+                <div class="menuHead">Main Course</div>
+                <div class="item" id="i10"><div class="iname">Naan</div><div class="iprice">35</div></div>
+                <div class="item" id="i11"><div class="iname">Butter Naan</div><div class="iprice">45</div></div>
+                <div class="item" id="i12"><div class="iname">Garlic Naan</div><div class="iprice">55</div></div>
+                <div class="item" id="i13"><div class="iname">Tandoori Roti</div><div class="iprice">25</div></div>
+                <div class="item" id="i14"><div class="iname">Mughalai Chicken</div><div class="iprice">450</div></div>
+                <div class="item" id="i15"><div class="iname">Shanghai Chicken</div><div class="iprice">480</div></div>
+                <div class="item" id="i16"><div class="iname">Ginger Garlic Chicken</div><div class="iprice">400</div></div>
+                <div class="item" id="i17"><div class="iname">Fillet o' Fish</div><div class="iprice">450</div></div>
+                <div class="item" id="i18"><div class="iname">Singapore Prawns</div><div class="iprice">540</div></div>
+                <div class="item" id="i19"><div class="iname">Dal Makhani</div><div class="iprice">280</div></div>
+                <div class="item" id="i20"><div class="iname">Paneer Butter Masala</div><div class="iprice">340</div></div>
+                <div class="item" id="i21"><div class="iname">Shahi Paneer</div><div class="iprice">390</div></div>
+                <div class="menuHead">Desserts</div>
+                <div class="item" id="i22"><div class="iname">Hazelnut Icecream</div><div class="iprice">120</div></div>
+                <div class="item" id="i23"><div class="iname">Belgian Chocolate Swirlie</div><div class="iprice">135</div></div>
+                <div class="item" id="i24"><div class="iname">Chocolate Brownie Sizzler</div><div class="iprice">180</div></div>
+                <div class="item" id="i25"><div class="iname">Tiramisu</div><div class="iprice">140</div></div>
+                <div class="item" id="i26"><div class="iname">Creme Brulee</div><div class="iprice">80</div></div>
+                <div class="item" id="i27"><div class="iname">Raspberry Cheesecake</div><div class="iprice">120</div></div>
+                <div class="item" id="i28"><div class="iname">Chef's Special Brownie</div><div class="iprice">200</div></div>
+                <div class="menuHead">Drinks</div>
+                <div class="item" id="i29"><div class="iname">Virgin Mohito</div><div class="iprice">140</div></div>
+                <div class="item" id="i30"><div class="iname">Cold Cappuchino</div><div class="iprice">160</div></div>
+                <div class="item" id="i31"><div class="iname">Lemon Mint Mohito</div><div class="iprice">150</div></div>
+                <div class="item" id="i32"><div class="iname">Darjeeling Tea</div><div class="iprice">100</div></div>
+                <div class="item" id="i33"><div class="iname">Red Velvet</div><div class="iprice">170</div></div>
+                <div class="item" id="i34"><div class="iname">Party Punch</div><div class="iprice">120</div></div>
+            </div>
+            <div class="rightPanel">
+                <div class="panelHeader">ORDER</div>
+                <div class="menuHead">Items</div>
+                <div class="orderList"></div>
+                <div class="menuHead" id="total">Total : 0</div>
+            </div>
+        </div>
+        <div class="textboxes">
+            <div id="date_Time">
+                Date and Time
+                <input id="day" class="dateTimeInput" type="number" placeholder="D" max="31" min="1"><input id="month" class="dateTimeInput" type="number" placeholder="M" max="12" min="1">
+                <input id="hours" class="dateTimeInput" type="number" placeholder="h" max="22" min="9">:<input id="minutes" class="dateTimeInput" type="number" placeholder="m" max="59" min="0">
+            </div>
+            <div id="enterbutton">
+                <input id="sub" type="submit" value="SUBMIT">
+            </div>
+        </div>
+        <div class="footerCustom">A joint project by Richanshu Jha and Manik Jaiswal</div>
+    </div>
+    <div class="errorBox">
+        <div class="closeButton">Close</div>
+    </div>
+    <div id="terminal" class="console consoleHidden">
+        <div class="consoleLine">HTML Starting to load</div>
+        <div class="consoleLine">Javascript Loading</div>
+        <script type="text/javascript" src="orderScript.js"></script>
+        <div class="consoleLine">Page fully Loaded</div>
+    </div>
+    <div id="paymentGateway1" class="paymentGateway pgHide">
+        <input id="pgCard1" class="pgInput" type="number" placeholder="CARD NUMBER">
+        <div class="paymentButton" id="paymentConfirmButton1">CONFIRM</div>
+        <div class="paymentButton" id="paymentCancelButton1">CANCEL</div>
+    </div>
+    <div id="paymentGateway2" class="paymentGateway pgHide">
+        <input id="mobNo" class="pgInput" type="number" placeholder="MOBILE NUMBER">
+        <input id="pgCard2" class="pgInput" type="number" placeholder="CARD NUMBER">
+        <div class="paymentButton" id="paymentConfirmButton2">CONFIRM</div>
+        <div class="paymentButton" id="paymentCancelButton2">CANCEL</div>
+    </div>
+</body>
+</html>
